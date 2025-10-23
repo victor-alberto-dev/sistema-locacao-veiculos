@@ -1,5 +1,6 @@
 # Locadora de Veículos 
 **Disciplina:** Banco de Dados  
+**Professor:** Howard Roatti
 
 
 ## Integrantes
