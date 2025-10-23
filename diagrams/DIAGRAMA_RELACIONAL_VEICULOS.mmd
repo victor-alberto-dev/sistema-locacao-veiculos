@@ -1,0 +1,33 @@
+erDiagram
+    CATEGORIAS {
+        ID INT PK "Not Null"
+        NOME String "Not Null"
+        DESCRICAO String "Not  Null"
+    }
+
+    VEICULOS {
+        ID INT PK "Not Null"
+        PLACA String "Not Null"
+        MODELO String "Not Null"
+        MARCA String "Not Null"
+        ANO INT "Not Null"
+        COR String "Not Null"
+        STATUS String "Not Null"
+        KILOMETRAGEM INT "Not Null"
+        CATEGORIA_ID INT FK "Not Null"
+    }
+
+    LOCACOES {
+        ID INT PK "Not Null"
+        VEICULO_ID INT FK "Not Null"
+        CLIENTE String "Not Null"
+        DATA_RETIRADA DATE "Not Null"
+        DATA_DEVOLUCAO_PREVISTA DATE "Not Null"
+        DATA_DEVOLUCAO_REAL DATE "Not Null"
+        VALOR_DIARIO INT "Not Null"
+        TOTAL INT "Not Null"
+        STATUS String "Not Null"
+    }
+
+    CATEGORIAS ||--o{ VEICULOS : "possui"
+    VEICULOS ||--o{ LOCACOES : "é alugado em"
