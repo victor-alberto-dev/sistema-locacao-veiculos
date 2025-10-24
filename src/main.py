@@ -3,7 +3,6 @@ import time
 from controller.categoria_controller import CategoriaController
 from controller.veiculo_controller import VeiculoController
 from controller.locacao_controller import LocacaoController
-from reports.reports import Reports
 from utils.oracle_queries import OracleQueries
 
 
